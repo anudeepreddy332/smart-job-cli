@@ -1,22 +1,34 @@
-# Smart Job CLI 🔍💼
+# 🔍 Smart Job CLI
+A simple command-line tool that searches job listings on Google using SerpAPI and saves them to a CSV.
 
-A command-line tool to scrape job postings based on keyword, location, remote preferences, and salary filter.
+## 🚀 Features
+- Search by keyword and location
+- Pull up to 50 job listings
+- Extracts job title, company, location, and URL
+- Outputs to CSV
 
-## 📦 Features
-  - Accepts job search criteria from the command line
-  - Filters by keyword, location, remote jobs, and minimum salary
-  - (Coming soon) Scrapes jobs and saves to CSV
+🛠️ CLI Options
+Option		Description					Required
+--keyword	Job title or role to search (e.g. “DevOps”)	✅
+--location	Job location (e.g. “Bangalore”)			✅
+--limit		Number of listings to pull (default: 10)	❌
+--output	CSV output file (default: jobs.csv)		❌
 
-🛠️ Coming Soon
-	•	Live scraping from Indeed or other job sites
-	•	Salary filtering logic
-	•	Pagination handling
-	•	Error handling and retry logic
+📦 Requirements
+• Python 3.7+
+• requests, pandas, python-dotenv
+• SerpAPI account + .env file with:
+	SERP_API=your_api_key_here
 
-🧠 Built With
-	•	Python 3.13
-	•	argparse (CLI argument parsing)
+📁 Project Structure
+	smart_job_cli/
+	├── main.py         # CLI entrypoint
+	├── scraper.py      # Scraping logic
+	├── utils.py        # CSV handling
+	├── .env            # Your SerpAPI key (gitignored)
+	├── .gitignore
+	├── jobs.csv        # Output file (gitignored)
 
-## 🚀 Usage
+## 🧠 Example Usage
 ```bash
-python main.py --keyword "Python Developer" --location "Delhi" --remote --min-salary 80000 --output jobs.csv
+python main.py --keyword "Python Developer" --location "Hyderabad" --limit 50
