@@ -7,20 +7,20 @@ A simple command-line tool that searches job listings on Google using SerpAPI an
 - Extracts job title, company, location, and URL
 - Outputs to CSV
 
-🛠️ CLI Options
+## 🛠️ CLI Options
 Option		Description					Required
 --keyword	Job title or role to search (e.g. “DevOps”)	✅
 --location	Job location (e.g. “Bangalore”)			✅
 --limit		Number of listings to pull (default: 10)	❌
 --output	CSV output file (default: jobs.csv)		❌
 
-📦 Requirements
+## 📦 Requirements
 • Python 3.7+
 • requests, pandas, python-dotenv
 • SerpAPI account + .env file with:
 	SERP_API=your_api_key_here
 
-📁 Project Structure
+## 📁 Project Structure
 	smart_job_cli/
 	├── main.py         # CLI entrypoint
 	├── scraper.py      # Scraping logic
