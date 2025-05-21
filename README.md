@@ -8,11 +8,12 @@ A simple command-line tool that searches job listings on Google using SerpAPI an
 - Outputs to CSV
 
 ## 🛠️ CLI Options
-Option		Description					Required
---keyword	Job title or role to search (e.g. “DevOps”)	✅
---location	Job location (e.g. “Bangalore”)			✅
---limit		Number of listings to pull (default: 10)	❌
---output	CSV output file (default: jobs.csv)		❌
+| Option     | Description                                  | Required |
+|------------|----------------------------------------------|----------|
+| --keyword  | Job title or role to search (e.g. "DevOps")  | Yes      |
+| --location | Job location (e.g. "Bangalore")              | Yes      |
+| --limit    | Number of listings to pull (default: 10)     | No       |
+| --output   | CSV output file (default: jobs.csv)          | No       |
 
 ## 📦 Requirements
 • Python 3.7+
